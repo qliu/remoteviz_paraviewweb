@@ -363,8 +363,8 @@
     <script>
       $("#btn-startapp").click(function(){
         if($("#collapseCloud").hasClass("in")){$("#collapseCloud").removeClass("in");}
-        if(!$("#collapseCloud").hasClass("in")){$("#collapseDataProp").addClass("in");}
-        if($("#collapseCloud").hasClass("in")){$("#collapseCamera").removeClass("in");}
+        if(!$("#collapseDataProp").hasClass("in")){$("#collapseDataProp").addClass("in");}
+        if(!$("#collapseDataSource").hasClass("in")){$("#collapseDataSource").addClass("in");}
         $("#pvimg").attr("src","./assets/img/viewport_img.png");
       });
     </script>
