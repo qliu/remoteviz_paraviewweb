@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./assets/img/du_favicon.ico">
+
+    <title>Remote Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/3rdparty/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome CSS -->
+    <link href="./assets/3rdparty/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Base CSS -->
+    <link href="./assets/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/3rdparty/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="assets/3rdparty/respond.js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="./assets/img/du_logo.png" class="navbar-logo">
+          <a class="navbar-brand" href="">Remote Visualization Client</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Left side controls -->
+        <div id="side-bar-left" class="col-xs-12 col-sm-4 col-md-4 col-lg-3 controls controls-left side-bar side-bar-left">
+          <!-- Data Properties -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseDataProp"><i class="fa fa-edit fa-lg"></i> Data Properties</a>
+              </h4>
+            </div>
+            <div id="collapseDataProp" class="panel-collapse collapse">
+              <div class="panel-body">
+                <!-- Data Variable -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseParameter">Display Variable</a>
+                    </h4>
+                  </div>
+                  <div id="collapseParameter" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>dd</option>
+                          <option>delt</option>
+                          <option>dflx</option>
+                          <option>dl</option>
+                          <option>dw</option>
+                          <option>sa</option>
+                          <option>sc</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Data Color -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseColorRamp">Color</a>
+                    </h4>
+                  </div>
+                  <div id="collapseColorRamp" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Color Ramp 1</option>
+                          <option>Color Ramp 2</option>
+                          <option>Color Ramp 3</option>
+                          <option>Color Ramp 4</option>
+                          <option>Color Ramp 5</option>
+                          <option>Color Ramp 6</option>
+                          <option>Color Ramp 7</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Camera Properties -->
+          <div class="panel panel-default root-panel">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseCamera"><i class="fa fa-camera fa-lg"></i> Camera Properties</a>
+              </h4>
+            </div>
+            <div id="collapseCamera" class="panel-collapse collapse">
+              <div class="panel-body">
+                <!-- Camera Position -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseCameraPosition">Camera Position</a>
+                    </h4>
+                  </div>
+                  <div id="collapseCameraPosition" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>x</label>
+                            <input class="form-control" placeholder="0" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>y</label>
+                            <input class="form-control" placeholder="-24" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>z</label>
+                            <input class="form-control" placeholder="26" autocomplete="off">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Camera Focal Point -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseCameraFocal">Camera Focal Point</a>
+                    </h4>
+                  </div>
+                  <div id="collapseCameraFocal" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>x</label>
+                            <input class="form-control" placeholder="0" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>y</label>
+                            <input class="form-control" placeholder="5" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <label>z</label>
+                            <input class="form-control" placeholder="6" autocomplete="off">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-warning btn-lg btn-block">Reset Camera</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right side controls -->
+        <div id="side-bar-right" class="col-xs-12 col-sm-4 col-md-4 col-lg-3 controls controls-right side-bar side-bar-right">
+          <!-- Data Source -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseDataSource"><i class="fa fa-database fa-lg"></i> Data Source</a>
+              </h4>
+            </div>
+            <div id="collapseDataSource" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="panel-group" id="panelgroup-datasource">
+                  <!-- Data on Server -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#panelgroup-datasource" href="#collapseDataServer">Data on Server</a>
+                      </h4>
+                    </div>
+                    <div id="collapseDataServer" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <div class="table-responsive">
+                          <table class="table table-hover table-noborder">
+                            <thead></thead>
+                            <tbody>
+                              <tr><td><i class="fa fa-folder-o fa-lg"></i> Folder 1</td></tr>
+                              <tr><td><i class="fa fa-folder-o fa-lg"></i> Folder 2</td></tr>
+                              <tr><td><i class="fa fa-file-o fa-lg"></i> File A</td></tr>
+                              <tr><td><i class="fa fa-file-o fa-lg"></i> File B</td></tr>
+                              <tr><td><i class="fa fa-file-o fa-lg"></i> File C</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Open DAP -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#panelgroup-datasource" href="#collapseDataOpendap">OPeNDAP Server - NASA</a>
+                      </h4>
+                    </div>
+                    <div id="collapseDataOpendap" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <label>Latitude</label>
+                            <input class="form-control" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <label>Longitude</label>
+                            <input class="form-control" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <label>Time</label>
+                            <input class="form-control" autocomplete="off">
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <label>Parameter</label>
+                            <input class="form-control" autocomplete="off">
+                            <br/>
+                            <button type="button" class="btn btn-warning btn-lg btn-block">Submit</button>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label>Data URL:</label>
+                          <input class="form-control" value="http://opendap.jpl.nasa.gov:80/opendap/GeodeticsGravity/tellus/L3/gldas_monthly/netcdf/GLDAS_NOAH10_M.A200101_201408.totalH2O.nc" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- User Upload -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#panelgroup-datasource" href="#collapseDataUserUpload">Upload Data</a>
+                      </h4>
+                    </div>
+                    <div id="collapseDataUserUpload" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <input type="file">
+                          <br/>
+                          <button type="button" class="btn btn-warning btn-lg btn-block">Upload</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cloud Configuration -->
+          <div id="side-bar-panel" class="panel panel-default root-panel">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#side-bar-panel" href="#collapseCloud"><i class="fa fa-cloud fa-lg"></i> Cloud Configuration</a>
+              </h4>
+            </div>
+            <div id="collapseCloud" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <!-- Server Region -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseRegion"><i class="fa fa-map-marker fa-lg"></i> Server Region</a>
+                    </h4>
+                  </div>
+                  <div id="collapseRegion" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select>
+                          <option>US East (N. Virginia)</option>
+                          <option>US West (N. California)</option>
+                          <option>US West (Oregon)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Resources Allocation -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseResource"><i class="fa fa-sitemap fa-lg"></i> Resources Allocation</a>
+                    </h4>
+                  </div>
+                  <div id="collapseResource" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select>
+                          <option>Cluster 1</option>
+                          <option>Cluster 2</option>
+                          <option>Cluster 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Client Application -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapseClientApp"><i class="fa fa-lightbulb-o fa-lg"></i> Client Application</a>
+                    </h4>
+                  </div>
+                  <div id="collapseClientApp" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <select>
+                          <option>Application 1</option>
+                          <option>Application 2</option>
+                          <option>Application 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <button id="btn-startapp" type="button" class="btn btn-success btn-lg btn-block">Start Application</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="pv-viz-container" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pv-viewport">
+          <img id="pvimg" src="" class="dummy-img">
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/3rdparty/jquery-11.1.1/jquery.min.js"></script>
+    <script src="./assets/3rdparty/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/3rdparty/bootstrap-3.3.0/js/ie10-viewport-bug-workaround.js"></script>
+  
+    <script>
+      $("#btn-startapp").click(function(){
+        if($("#collapseCloud").hasClass("in")){$("#collapseCloud").removeClass("in");}
+        if(!$("#collapseCloud").hasClass("in")){$("#collapseDataProp").addClass("in");}
+        if($("#collapseCloud").hasClass("in")){$("#collapseCamera").removeClass("in");}
+        $("#pvimg").attr("src","./assets/img/viewport_img.png");
+      });
+    </script>
+
+</body></html>
